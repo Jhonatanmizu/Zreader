@@ -1,0 +1,143 @@
+<template>
+  <header id="header">
+    <a href="#" class="logo">Zreader</a>
+    <nav :class="[{ active: toggleMenuStatus }, 'nav']">
+      <button
+        class="btn-mobile"
+        @click="toggleMenu"
+        :aria-expanded="toggleMenuStatus"
+        aria-controls="menu"
+        aria-haspopup="true"
+        :aria-label="ariaLabel"
+      >
+        Menu
+        <span id="hamburguer"></span>
+      </button>
+      <ul class="menu" role="menu">
+        <li><router-link to="/">Início</router-link></li>
+        <li><router-link to="/About">Sobre</router-link></li>
+        <li><router-link to="/About">Jogos</router-link></li>
+        <li><router-link to="/About">Dicas de uso</router-link></li>
+      </ul>
+    </nav>
+  </header>
+</template>
+
+<script>
+export default {
+  name: "Header",
+  created() {},
+  data() {
+    return {
+      ariaLabel: "Abrir menu",
+      toggleMenuStatus: false,
+    };
+  },
+  props: {},
+  methods: {
+    toggleMenu() {
+      this.toggleMenuStatus = !this.toggleMenuStatus;
+      this.ariaLabel = this.toggleMenuStatus ? "Fechar menu" : "Abrir menu";
+    },
+  },
+};
+</script>
+
+<style scoped>
+#header {
+  border: bottom 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 4.5rem;
+  padding: 1rem;
+  background: #e72b45;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+a:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.menu {
+  display: flex;
+  gap: 0.5rem;
+}
+.menu a {
+  display: block;
+  padding: 0.5rem;
+}
+.btn-mobile {
+  display: none;
+}
+@media (max-width: 600px) {
+  .menu {
+    display: block;
+    height: 0px;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    right: 0px;
+    background: #e72b45;
+    transition: 0.6s;
+    z-index: 1000;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+  .nav.active .menu {
+    height: calc(100vh - 70px);
+    visibility: visible;
+    overflow-y: auto;
+  }
+  .menu a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+  }
+  .btn-mobile {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+    color: #fff;
+  }
+  #hamburguer {
+    display: block;
+    border-top: 2px solid;
+    width: 20px;
+    color: #fff;
+  }
+  #hamburguer::after,
+  #hamburguer::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+  }
+  .nav.active #hamburguer {
+    border-top-color: transparent;
+  }
+  .nav.active #hamburguer::before {
+    transform: rotate(135deg);
+  }
+
+  .nav.active #hamburguer::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+}
+</style>
