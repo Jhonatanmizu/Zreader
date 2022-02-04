@@ -16,8 +16,8 @@
       <ul class="menu" role="menu">
         <li><router-link to="/">Início</router-link></li>
         <li><router-link to="/About">Sobre</router-link></li>
-        <li><router-link to="/About">Jogos</router-link></li>
-        <li><router-link to="/About">Dicas de uso</router-link></li>
+        <li><router-link to="/Games">Jogos</router-link></li>
+        <li><router-link to="/HowToUse">Dicas de uso</router-link></li>
       </ul>
     </nav>
   </header>
