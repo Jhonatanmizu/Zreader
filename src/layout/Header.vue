@@ -14,10 +14,18 @@
         <span id="hamburguer"></span>
       </button>
       <ul class="menu" role="menu">
-        <li><router-link to="/">Início</router-link></li>
-        <li><router-link to="/About">Sobre</router-link></li>
-        <li><router-link to="/Games">Jogos</router-link></li>
-        <li><router-link to="/HowToUse">Dicas de uso</router-link></li>
+        <li><router-link to="/" @click="isMenuOpen">Início</router-link></li>
+        <li>
+          <router-link to="/About" @click="isMenuOpen">Sobre</router-link>
+        </li>
+        <li>
+          <router-link to="/Games" @click="isMenuOpen">Jogos</router-link>
+        </li>
+        <li>
+          <router-link to="/HowToUse" @click="isMenuOpen"
+            >Dicas de uso</router-link
+          >
+        </li>
       </ul>
     </nav>
   </header>
@@ -38,6 +46,9 @@ export default {
     toggleMenu() {
       this.toggleMenuStatus = !this.toggleMenuStatus;
       this.ariaLabel = this.toggleMenuStatus ? "Fechar menu" : "Abrir menu";
+    },
+    isMenuOpen() {
+      if (this.toggleMenuStatus) return (this.toggleMenuStatus = false);
     },
   },
 };
