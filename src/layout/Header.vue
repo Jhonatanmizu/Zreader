@@ -1,6 +1,7 @@
 <template>
   <header id="header">
-    <a href="#" class="logo">Zreader</a>
+    <img src="../assets/logo.svg" class="zreader-logo" alt="Zreader logo" />
+    <!-- <a href="#" class="logo">Zreader</a> -->
     <nav :class="[{ active: toggleMenuStatus }, 'nav']">
       <button
         class="btn-mobile"
@@ -10,7 +11,6 @@
         aria-haspopup="true"
         :aria-label="ariaLabel"
       >
-        Menu
         <span id="hamburguer"></span>
       </button>
       <ul class="menu" role="menu">
@@ -58,24 +58,29 @@ export default {
 #header {
   border: bottom 1px solid #ccc;
   display: flex;
+
   align-items: center;
   justify-content: space-between;
   width: 100%;
   height: 4.5rem;
-  padding: 1rem;
-  background: #e72b45;
+  padding: 1rem 5.5rem;
+  background: var(--primary-color);
 }
+
 a {
   color: #fff;
   text-decoration: none;
   font-family: sans-serif;
 }
-a:hover {
+/* a:hover {
   background: rgba(0, 0, 0, 0.5);
-}
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+} */
+.zreader-logo {
+  height: 3.8rem;
+  width: 3.8rem;
+  box-shadow: 0px 0px 56px -1px rgba(0, 0, 0, 0.55);
+  -webkit-box-shadow: 0px 0px 56px -1px rgba(0, 0, 0, 0.55);
+  -moz-box-shadow: 0px 0px 56px -1px rgba(0, 0, 0, 0.55);
 }
 .menu {
   display: flex;
@@ -84,11 +89,18 @@ a:hover {
 .menu a {
   display: block;
   padding: 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+.menu a:hover {
+  color: rgba(0, 0, 0, 0.5);
 }
 .btn-mobile {
   display: none;
 }
 @media (max-width: 600px) {
+  #header {
+    padding: 1rem;
+  }
   .menu {
     display: block;
     height: 0px;
@@ -97,6 +109,7 @@ a:hover {
     top: 70px;
     right: 0px;
     background: #e72b45;
+    border-radius: 0 5px;
     transition: 0.6s;
     z-index: 1000;
     visibility: hidden;
