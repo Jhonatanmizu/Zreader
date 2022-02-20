@@ -6,9 +6,12 @@
       <img src="../assets/youtube.svg" alt="Youtube" />
     </div>
     <div class="support">
-      <img src="" alt="Governo do estado da Bahia" />
-      <img src="" alt="Facebook" />
-      <img src="" alt="Facebook" />
+      <h3>Apoio:</h3>
+      <div class="support-imgs">
+        <img src="../assets/finep.jpg" alt="Finep" />
+        <img src="../assets/govba.svg" alt="Governo do estado da Bahia" />
+        <img src="../assets/fapesb.svg" alt="Fapesb" />
+      </div>
     </div>
   </footer>
 </template>
@@ -33,7 +36,7 @@ export default {
   height: 12.81rem;
   display: flex;
   padding: 1rem 5.5rem;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
 }
 .socials {
@@ -46,10 +49,33 @@ export default {
   width: 2.81rem;
   height: 2.5rem;
 }
+.support h3 {
+  text-align: center;
+  margin: 0.2rem;
+}
+.support-imgs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  background-color: #fff;
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+}
+.support img {
+  width: 10rem;
+  border-radius: 5px;
+  height: 7rem;
+}
 @media (max-width: 600px) {
   .footer {
     flex-direction: column;
+    align-items: center;
     padding: var(--gap);
+  }
+  .support img {
+    width: 6rem;
+    height: 5.5rem;
   }
 }
 </style>
