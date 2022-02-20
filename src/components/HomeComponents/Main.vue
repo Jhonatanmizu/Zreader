@@ -1,18 +1,20 @@
 <template>
-  <main class="main container gap">
-    <div class="main-content">
-      <h1 class="main-title">Zreader</h1>
-      <p class="main-text">
-        O zReader é uma suite composta por diversos jogos, todos com o objetivo
-        de desenvolver a capacidade de leitura das crianças, bem como seu gosto
-        pela atividade de leitura.
-      </p>
-      <Button text="Baixe o app!" />
-    </div>
-    <div class="main-image">
-      <img src="" alt="Rita gasguita e Chica Galêga" />
-    </div>
-  </main>
+  <section>
+    <main class="main container gap">
+      <div class="main-content">
+        <h1 class="main-title"><span class="main-title-span">z</span>reader</h1>
+        <p class="main-text">
+          O zReader é uma suite composta por diversos jogos, todos com o objetivo de
+          desenvolver a capacidade de leitura das crianças, bem como seu gosto pela
+          atividade de leitura.
+        </p>
+        <Button text="Baixe o app!" />
+      </div>
+      <div class="main-image">
+        <img src="" alt="Rita gasguita e Chica Galêga" />
+      </div>
+    </main>
+  </section>
 </template>
 
 <script>
@@ -25,7 +27,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .main {
   display: grid;
   align-items: flex;
@@ -38,7 +40,11 @@ export default {
   margin-bottom: 3.75rem;
 }
 .main-title {
+  text-transform: uppercase;
   margin-bottom: 1.5rem;
+}
+.main-title-span {
+  text-transform: lowercase;
 }
 .main-text {
   margin-bottom: 2.1875rem;
