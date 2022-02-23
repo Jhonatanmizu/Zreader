@@ -30,7 +30,7 @@ export default {
 <style scoped>
 .main {
   display: grid;
-  align-items: flex;
+  align-items: center;
   grid-template-columns: 1fr 1fr;
 }
 .mb24 {
@@ -48,7 +48,7 @@ export default {
 }
 .main-text {
   margin-bottom: 2.1875rem;
-  line-height: 2;
+  line-height: 36px;
   text-align: justify;
   font-size: 1.5rem;
 }
