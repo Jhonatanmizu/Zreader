@@ -5,7 +5,7 @@
 </template>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700;900&family=Open+Sans:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
 :root {
   --gap: 1rem;
   --primary-color: #e72b45;
@@ -35,13 +35,13 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 h1 {
   font-size: 2.25rem;
 }
 body {
-  font-family: "Open sans", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 1.25rem;
 }
 </style>

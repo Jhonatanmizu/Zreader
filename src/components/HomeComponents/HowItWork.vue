@@ -1,7 +1,7 @@
 <template>
   <section>
-    <div class="how-it-work container">
-      <h2 class="mb60">Como ele funciona?</h2>
+    <div class="how-it-work container mb60">
+      <h2 class="mb24">Como ele funciona?</h2>
       <div class="hw-content">
         <img src="../../assets/reader.svg" class="mb24" alt="leitor" />
         <p class="hw-text gap">
@@ -51,6 +51,7 @@ export default {
   width: 40rem;
   height: 30rem;
 }
+
 @media (max-width: 600px) {
   .hw-image img {
     width: 20rem;

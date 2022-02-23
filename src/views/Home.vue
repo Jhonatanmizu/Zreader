@@ -1,16 +1,19 @@
 <template>
   <Main />
   <HowItWork />
+  <Proposal />
 </template>
 
 <script>
 import HowItWork from "../components/HomeComponents/HowItWork.vue";
 import Main from "../components/HomeComponents/Main.vue";
+import Proposal from "../components/HomeComponents/Proposal.vue";
 export default {
   name: "Home",
   components: {
     Main,
     HowItWork,
+    Proposal,
   },
 };
 </script>
