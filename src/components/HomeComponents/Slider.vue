@@ -40,14 +40,12 @@ export default {
     getImagesLength() {
       this.images = document.querySelectorAll("#slider img");
       this.max = this.images.length;
-      console.log("Max", this.max);
       this.start();
     },
     start() {
       console.log("Start");
       setInterval(() => {
         this.nextImage();
-        console.log("rodando");
       }, this.time);
     },
     nextImage() {
@@ -62,13 +60,6 @@ export default {
 </script>
 
 <style scoped>
-/* #slider {
-  height: 25vw;
-  max-height: 150px;
-  width: 80%;
-  max-width: 500px;
-  position: relative;
-} */
 .slider-container {
   display: flex;
   justify-content: center;
