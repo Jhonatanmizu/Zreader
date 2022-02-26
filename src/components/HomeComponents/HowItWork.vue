@@ -5,13 +5,19 @@
       <div class="hw-content">
         <img src="../../assets/reader.svg" class="mb24" alt="leitor" />
         <p class="hw-text gap">
-          O aplicativo funciona como uma espécie de biblioteca de livros-jogos, onde as
-          crianças podem ler narrativas enquanto montam um desenho animado e dublam as
-          ações e personagens que constam no texto.
+          O aplicativo funciona como uma espécie de biblioteca de livros-jogos,
+          onde as crianças podem ler narrativas enquanto montam um desenho
+          animado e dublam as ações e personagens que constam no texto.
         </p>
         <div class="hw-image">
           <img src="../../assets/leitura.svg" alt="Mulher lendo" />
         </div>
+        <p class="hw-text gap">
+          Além disso, também está disponível uma loja, onde é possível realizar
+          a aquisição de novos livros (os chamados zBooks), para que as crianças
+          se divirtam ainda mais com uma maior variedade de histórias para
+          jogar.
+        </p>
       </div>
     </div>
   </section>
