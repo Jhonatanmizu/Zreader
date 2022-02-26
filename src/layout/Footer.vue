@@ -59,7 +59,7 @@ export default {
   justify-content: space-between;
   gap: 0.5rem;
   background-color: #fff;
-  padding: 0.2rem;
+  padding: 0.5rem;
   border-radius: 0.2rem;
 }
 .support img {
