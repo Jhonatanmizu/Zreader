@@ -1,52 +1,20 @@
 <template>
-  <div class="slider">
-    <div class="slides">
-      <input type="radio" name="radio-btn" id="radio1" />
-      <input type="radio" name="radio-btn" id="radio2" />
-      <input type="radio" name="radio-btn" id="radio3" />
-      <input type="radio" name="radio-btn" id="radio4" />
-      <!-- slide -->
-      <div class="slide first">
-        <img
-          src="../../assets/zreader-images/telaInicial2.png"
-          alt="Tela inicial do zreader"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="../../assets/zreader-images/telaDescricaoJogos.png"
-          alt="Tela Descrição de jogos do zreader"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="../../assets/zreader-images/store.png"
-          alt="loja de jogos do zreader"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="../../assets/zreader-images/estudioGravacao.png"
-          alt="Tela  de Estudio  do zreader"
-        />
-      </div>
-      <!-- Nav-->
-      <div class="navigation-auto">
-        <div class="auto-btn1"></div>
-
-        <div class="auto-btn2"></div>
-        <div class="auto-btn3"></div>
-        <div class="auto-btn4"></div>
-      </div>
-    </div>
-    <!-- slide -->
-
-    <!-- label -->
-    <div class="manual-navigation">
-      <label for="radio1" class="manual-btn"></label>
-      <label for="radio2" class="manual-btn"></label>
-      <label for="radio3" class="manual-btn"></label>
-      <label for="radio4" class="manual-btn"></label>
+  <div class="container gap slider-container">
+    <div id="slider">
+      <img
+        class="selected"
+        src="../../assets/zreader-images/telaInicial2.png"
+        alt="Tela inicial do Zreader"
+      />
+      <img src="../../assets/zreader-images/store.png" alt="Loja  do Zreader" />
+      <img
+        src="../../assets/zreader-images/telaDescricaoJogos.png"
+        alt="Descrição de jogos do Zreader"
+      />
+      <img
+        src="../../assets/zreader-images/estudioGravacao.png"
+        alt="Estúdio de gravação do zreader"
+      />
     </div>
   </div>
 </template>
@@ -54,99 +22,87 @@
 <script>
 export default {
   name: "Slider",
-  created() {},
+  beforeMount() {},
+  mounted() {
+    this.getImagesLength();
+  },
+
   data() {
-    return {};
+    return {
+      time: 2000,
+      currentImageIndex: 0,
+      images: null,
+      max: 0,
+    };
   },
   props: {},
-  methods: {},
+  methods: {
+    getImagesLength() {
+      this.images = document.querySelectorAll("#slider img");
+      this.max = this.images.length;
+      console.log("Max", this.max);
+      this.start();
+    },
+    start() {
+      console.log("Start");
+      setInterval(() => {
+        this.nextImage();
+        console.log("rodando");
+      }, this.time);
+    },
+    nextImage() {
+      this.images[this.currentImageIndex].classList.remove("selected");
+      this.currentImageIndex = this.currentImageIndex + 1;
+      if (this.currentImageIndex >= this.max) this.currentImageIndex = 0;
+
+      this.images[this.currentImageIndex].classList.add("selected");
+    },
+  },
 };
 </script>
 
 <style scoped>
-.slider {
-  margin: 0 auto;
-  width: 800px;
-  height: 400px;
-  overflow: hidden;
-}
-.slides {
-  width: 400%;
-  height: 400px;
+/* #slider {
+  height: 25vw;
+  max-height: 150px;
+  width: 80%;
+  max-width: 500px;
+  position: relative;
+} */
+.slider-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.slides input {
-  display: none;
-}
-.slide {
-  width: 25%;
+#slider {
+  height: 30rem;
+  width: 58rem;
   position: relative;
 }
-.slide img {
-  width: 800px;
-}
-.manual-navigation {
+#slider img {
+  border-radius: 0.3rem;
   position: absolute;
-  width: 800px;
-  margin-top: -40px;
   display: flex;
-  justify-content: center;
+  width: 100%;
+  object-fit: cover;
+  transition: all 1s;
+  height: 100%;
+  opacity: 0;
 }
-.manual-btn {
-  border: 2px solid crimson;
-  padding: 5px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 1s;
+#slider img.selected {
+  opacity: 1;
 }
-.manual-btn:not(:last-child) {
-  margin-right: 40px;
+@media (max-width: 600px) {
+  #slider {
+    height: 16rem;
+    width: 25rem;
+  }
 }
-.manual-btn:hover {
-  background-color: crimson;
-}
-#radio1:checked ~ .first {
-  margin-left: 0;
-}
-
-#radio2:checked ~ .first {
-  margin-left: -25%;
-}
-
-#radio3:checked ~ .first {
-  margin-left: -50%;
-}
-
-#radio4:checked ~ .first {
-  margin-left: -75%;
-}
-.navigation-auto div {
-  border: 2px solid #000;
-  padding: 5px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 1s;
-}
-.navigation-auto {
-  position: absolute;
-  width: 800px;
-  margin-top: 360px;
-  display: flex;
-  justify-content: center;
-}
-.navigation-auto:not(:last-child) {
-  margin-right: 40px;
-}
-#radio1:checked ~ .navigation-auto .auto-btn1 {
-  background-color: crimson;
-}
-#radio2:checked ~ .navigation-auto .auto-btn2 {
-  background-color: crimson;
-}
-#radio3:checked ~ .navigation-auto .auto-btn3 {
-  background-color: crimson;
-}
-#radio4:checked ~ .navigation-auto .auto-btn4 {
-  background-color: crimson;
+@media (max-width: 480px) {
+  #slider {
+    height: 11rem;
+    width: 19rem;
+  }
 }
 </style>
