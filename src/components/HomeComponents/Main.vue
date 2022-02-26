@@ -4,14 +4,17 @@
       <div class="main-content">
         <h1 class="main-title"><span class="main-title-span">z</span>reader</h1>
         <p class="main-text">
-          O zReader é uma suite composta por diversos jogos, todos com o objetivo de
-          desenvolver a capacidade de leitura das crianças, bem como seu gosto pela
-          atividade de leitura.
+          O zReader é uma suite composta por diversos jogos, todos com o
+          objetivo de desenvolver a capacidade de leitura das crianças, bem como
+          seu gosto pela atividade de leitura.
         </p>
         <Button text="Baixe o app!" />
       </div>
       <div class="main-image">
-        <img src="" alt="Rita gasguita e Chica Galêga" />
+        <img
+          src="../../assets/zreader-images/appGooglePlay.png"
+          alt="App zreader"
+        />
       </div>
     </main>
   </section>
@@ -31,6 +34,7 @@ export default {
 .main {
   display: grid;
   align-items: center;
+  justify-content: space-between;
   grid-template-columns: 1fr 1fr;
 }
 .mb24 {
@@ -53,10 +57,14 @@ export default {
   font-size: 1.5rem;
 }
 .main-image {
-  height: 18.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.main-image img {
+  width: 100%;
+  height: 80%;
+  border-radius: 0.32rem;
 }
 
 @media (max-width: 600px) {
