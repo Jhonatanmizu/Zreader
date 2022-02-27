@@ -33,7 +33,7 @@ export default {
   width: 100%;
   color: var(--secondary-color);
   background: var(--primary-color);
-  height: 12.81rem;
+  min-height: 12.81rem;
   display: flex;
   padding: 1rem 5.5rem;
   align-items: center;
