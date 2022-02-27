@@ -2,14 +2,12 @@
   <section class="container gap">
     <div class="proposal-content">
       <h2>Tudo em um minuto! Explicação rápida da nossa proposta.</h2>
-      <iframe
-        class="explanation-video"
-        src="https://www.youtube.com/embed/On_kXK8uIjM"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
+      <video class="explanation-video" controls>
+        <source
+          src="../../assets/videos/zReaderEm1Minuto.mp4"
+          type="video/mp4"
+        />
+      </video>
     </div>
   </section>
 </template>
@@ -46,7 +44,7 @@ export default {
     height: 19rem;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 300px) {
   .proposal-content .explanation-video {
     width: 15rem;
     height: 15rem;
