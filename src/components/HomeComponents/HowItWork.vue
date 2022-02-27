@@ -63,5 +63,8 @@ export default {
     width: 20rem;
     height: 25rem;
   }
+  .hw-text {
+    text-align: justify;
+  }
 }
 </style>
