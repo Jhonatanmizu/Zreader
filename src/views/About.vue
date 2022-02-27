@@ -1,16 +1,18 @@
 <template>
   <div class="about">
-    <h1>Sobre o projeto</h1>
     <Theory />
+    <Benefits />
   </div>
 </template>
 <script>
 import Theory from "../components/AboutComponents/Theory.vue";
+import Benefits from "../components/AboutComponents/Benefits.vue";
 
 export default {
   name: "About",
   components: {
     Theory,
+    Benefits,
   },
 };
 </script>
