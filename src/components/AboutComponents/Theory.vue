@@ -44,7 +44,7 @@ export default {
 
 <style scoped>
 .theory-section {
-  margin-bottom: 3.75rem;
+  margin-bottom: 2.5rem;
 }
 .theory-content .theory-title {
   text-align: center;
