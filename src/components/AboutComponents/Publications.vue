@@ -30,7 +30,10 @@
           </a>
         </li>
         <li class="list-element">
-          <a href="#" class="list-link">
+          <a
+            href="https://br-ie.org/pub/index.php/sbie/article/viewFile/8835/6393"
+            class="list-link"
+          >
             GUERRA, Fabrício Vale de Azevedo; GORGONIO, F. L. ; GUERRERO, D. D.
             S. ; Figueiredo, J. C. A. . Syllabic Keyboard: A Literacy Game for
             Motivating First Grade Children to Read. In: Simpósio Brasileiro de
