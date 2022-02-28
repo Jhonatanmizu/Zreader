@@ -20,11 +20,4 @@ export default {
   },
 };
 </script>
-<style>
-.mb24 {
-  margin-bottom: 1.5rem;
-}
-.mb60 {
-  margin-bottom: 3.75rem;
-}
-</style>
+<style></style>
