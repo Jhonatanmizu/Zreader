@@ -44,6 +44,12 @@ body {
   font-family: "Oswald", sans-serif;
   font-size: 1.25rem;
 }
+.mb24 {
+  margin-bottom: 1.5rem;
+}
+.mb60 {
+  margin-bottom: 3.75rem;
+}
 </style>
 <script>
 import Header from "./layout/Header.vue";
