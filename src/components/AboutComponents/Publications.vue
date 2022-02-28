@@ -10,6 +10,7 @@
           <a
             class="list-link"
             href="http://br-ie.org/pub/index.php/sbie/article/viewFile/8013/5707"
+            target="_blank"
           >
             GUERRA, FABRÍCIO ; SANTOS, JOSÉ AMANCIO ; SEREY, DALTON ;
             FIGUEIREDO, JORGE CÉSAR ABRANTES DE . z-Reader: a Mobile Game Suite
@@ -22,6 +23,7 @@
           <a
             href="http://dspace.sti.ufcg.edu.br:8080/xmlui/bitstream/handle/riufcg/10736/FABR%C3%8DCIO%20VALE%20DE%20AZEVEDO%20GUERRA%20-%20TESE%20(PPGCC)%202018.pdf?sequence=1&isAllowed=y"
             class="list-link"
+            target="_blank"
           >
             GUERRA, FABRÍCIO. zReader: a Mobile Game Suite for Improving
             Children’s Reading Skills and Behavior. Tese de doutorado
@@ -33,6 +35,7 @@
           <a
             href="https://br-ie.org/pub/index.php/sbie/article/viewFile/8835/6393"
             class="list-link"
+            target="_blank"
           >
             GUERRA, Fabrício Vale de Azevedo; GORGONIO, F. L. ; GUERRERO, D. D.
             S. ; Figueiredo, J. C. A. . Syllabic Keyboard: A Literacy Game for
@@ -44,6 +47,7 @@
         <li class="list-element">
           <a
             href="https://repositorio.ufrn.br/handle/123456789/33042"
+            target="_blank"
             class="list-link"
             >SOUSA, Tamila Kécia Nunes. Efeitos da prática pedagógica aliada à
             tecnologia sobre o processo de leitura em crianças ao fim do ciclo
