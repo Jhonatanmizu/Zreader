@@ -1,7 +1,7 @@
 <template>
   <section class="theory-section">
     <div class="container gap theory-content">
-      <h3 class="theory-title mb24">Um pouco mais de teoria</h3>
+      <h2 class="theory-title mb24">Um pouco mais de teoria</h2>
       <p class="theory-text mb24">
         O zReader é resultado de um amplo estudo sobre o uso de tecnologia
         digital para apoiar a alfabetização de crianças. Desenvolvido após a
