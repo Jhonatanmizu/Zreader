@@ -1,8 +1,8 @@
 <template>
   <section>
     <div class="container gap publicatons-container">
-      <h3 class="mb24">Publicações científicas</h3>
-      <p class="mb24">
+      <h3 class="mb24 publications-title">Publicações científicas</h3>
+      <p class="mb24 publications-subtitle">
         Veja aqui algumas produções científicas publicadas sobre o zReader:
       </p>
       <ul class="list">
@@ -74,6 +74,10 @@ export default {
 </script>
 
 <style scoped>
+.publications-title,
+.publications-subtitle {
+  text-align: center;
+}
 .list {
   display: flex;
   flex-direction: column;
