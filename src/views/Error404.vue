@@ -23,7 +23,6 @@ export default {
   align-items: center;
   flex-direction: column;
   min-height: 100vh;
-  min-width: 100vw;
 }
 .error .error-text {
   color: crimson;
