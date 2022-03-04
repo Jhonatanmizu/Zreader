@@ -1,11 +1,18 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import Home from "../views/Home.vue";
-
+import Login from "../views/Login.vue";
 const routes = [
   {
     path: "/",
     name: "Home",
     component: Home,
+    children: {
+      path: "login",
+      name: "login",
+
+      // component: () => import("../views/Login.vue"),
+      component: Login,
+    },
   },
   {
     path: "/about",
@@ -27,9 +34,13 @@ const routes = [
     component: () => import("../views/HowToUse.vue"),
   },
   {
-    path: "/login",
-    name: "Login",
-    component: () => import("../views/Login.vue"),
+    path: "/404",
+    name: "paginaNaoExiste",
+    component: () => import("../views/Error404.vue"),
+  },
+  {
+    path: "/:catchAll(.*)",
+    redirect: "/404",
   },
 ];
 
