@@ -1,8 +1,7 @@
 <template>
   <Header></Header>
-  <transition name="moveInUp">
-    <router-view />
-  </transition>
+
+  <router-view />
   <Footer></Footer>
 </template>
 
