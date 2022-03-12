@@ -87,12 +87,25 @@ a {
   gap: 0.5rem;
 }
 .menu a {
+  position: relative;
+  text-transform: uppercase;
   display: block;
   padding: 0.5rem;
+  /* transition: all 0.3s ease-in-out; */
+}
+.menu a::after {
+  content: "";
+  position: absolute;
+  bottom: 0.2rem;
+  left: 50%;
+  width: 0;
+  height: 0.2rem;
+  background-color: #fff;
   transition: all 0.3s ease-in-out;
 }
-.menu a:hover {
-  color: rgba(0, 0, 0, 0.5);
+.menu a:hover::after {
+  left: 25%;
+  width: 50%;
 }
 .btn-mobile {
   display: none;
@@ -108,12 +121,15 @@ a {
     width: 100%;
     top: 70px;
     right: 0px;
-    background: #e72b45;
+    background: #e91632;
     border-radius: 0 5px;
     transition: 0.6s;
     z-index: 1000;
     visibility: hidden;
     overflow-y: hidden;
+    box-shadow: 0px 11px 52px -12px rgba(0, 0, 0, 0.75) inset;
+    -webkit-box-shadow: 0px 11px 52px -12px rgba(0, 0, 0, 0.75) inset;
+    -moz-box-shadow: 0px 11px 52px -12px rgba(0, 0, 0, 0.75) inset;
   }
   .nav.active .menu {
     height: calc(100vh - 70px);
@@ -123,7 +139,21 @@ a {
   .menu a {
     padding: 1rem 0;
     margin: 0 1rem;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+    /* border-bottom: 2px solid rgba(0, 0, 0, 0.5); */
+  }
+  .menu a::after {
+    content: "";
+    position: absolute;
+    bottom: 0.2rem;
+    left: 0%;
+    width: 0;
+    height: 0.2rem;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+  }
+  .menu a:hover::after {
+    left: 0%;
+    width: 50%;
   }
   .btn-mobile {
     display: flex;
