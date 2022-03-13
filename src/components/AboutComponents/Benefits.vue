@@ -65,6 +65,11 @@ export default {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 4rem;
+  background-color: #f2f2f2;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 5px 5px 30px 5px rgba(0, 0, 0, 0.49);
+  box-shadow: 5px 5px 30px 5px rgba(0, 0, 0, 0.49);
 }
 @media screen and (max-width: 800px) {
   .grid {

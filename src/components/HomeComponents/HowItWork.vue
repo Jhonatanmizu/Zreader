@@ -67,7 +67,7 @@ export default {
   height: 3.75rem;
   width: 3.75rem;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 810px) {
   .hw-image img {
     width: 20rem;
     height: 25rem;

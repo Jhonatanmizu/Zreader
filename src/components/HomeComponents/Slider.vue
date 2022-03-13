@@ -84,7 +84,7 @@ export default {
 #slider img.selected {
   opacity: 1;
 }
-@media (max-width: 800px) {
+@media (max-width: 810px) {
   #slider {
     height: 16rem;
     width: 25rem;
