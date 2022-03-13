@@ -72,9 +72,6 @@ a {
   text-decoration: none;
   font-family: sans-serif;
 }
-/* a:hover {
-  background: rgba(0, 0, 0, 0.5);
-} */
 .zreader-logo {
   height: 3.8rem;
   width: 3.8rem;
@@ -121,15 +118,13 @@ a {
     width: 100%;
     top: 70px;
     right: 0px;
-    background: #e91632;
+    background: var(--primary-color);
     border-radius: 0 5px;
     transition: 0.6s;
     z-index: 1000;
     visibility: hidden;
     overflow-y: hidden;
-    box-shadow: 0px 11px 52px -12px rgba(0, 0, 0, 0.75) inset;
-    -webkit-box-shadow: 0px 11px 52px -12px rgba(0, 0, 0, 0.75) inset;
-    -moz-box-shadow: 0px 11px 52px -12px rgba(0, 0, 0, 0.75) inset;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
   .nav.active .menu {
     height: calc(100vh - 70px);

@@ -52,5 +52,8 @@ export default {
 .theory-content .theory-text {
   text-align: justify;
   line-height: 1.875rem;
+  background-color: #f2f2f2;
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
 </style>

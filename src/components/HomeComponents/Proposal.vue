@@ -38,7 +38,7 @@ export default {
   height: 30rem;
   border-radius: 0.5rem;
 }
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .proposal-content .explanation-video {
     width: 19rem;
     height: 19rem;

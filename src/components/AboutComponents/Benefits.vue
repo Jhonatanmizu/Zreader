@@ -1,16 +1,25 @@
 <template>
   <div class="container benefits-content gap">
-    <h3 class="benefits-title">
+    <h3 class="benefits-title mb24">
       Os principais benefícios para as crianças são melhorias em relação à:
     </h3>
-    <ul class="benefits-list mb24">
-      <li>Habilidades de leitura</li>
-      <li>Capacidade de interpretação de textos</li>
-      <li>Atenção durante a leitura;</li>
-      <li>Entonação e pontuação (prosódia);</li>
-      <li>Criatividade</li>
-      <li>Capacidade de improvisação.</li>
-    </ul>
+    <div class="grid mb60">
+      <Gridelement icon="fa-solid fa-baby" text="Capacidade de improvisação" />
+      <Gridelement icon="fa-solid fa-book-open" text="Habilidades de leitura" />
+      <Gridelement
+        icon="fa-solid fa-brain"
+        text="Capacidade de interpretação de textos"
+      />
+      <Gridelement icon="fa-solid fa-pen" text="Criatividade" />
+      <Gridelement
+        icon="fa-solid fa-quote-right"
+        text="Entonação e pontuação"
+      />
+      <Gridelement
+        icon="fa-solid fa-glasses"
+        text="Atenção durante a leitura"
+      />
+    </div>
     <p class="benefits-text">
       Para detalhes dos aspectos teóricos e experimentos que demonstram
       cientificamente alguns dos benefícios do zReader, veja as publicações
@@ -20,6 +29,7 @@
 </template>
 
 <script>
+import Gridelement from "./BenefitsComponents/Gridelement.vue";
 export default {
   name: "Benefits",
   created() {},
@@ -28,6 +38,7 @@ export default {
   },
   props: {},
   methods: {},
+  components: { Gridelement },
 };
 </script>
 
@@ -48,5 +59,17 @@ export default {
 
 .benefits-list li {
   list-style-type: disc;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 4rem;
+}
+@media screen and (max-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
 }
 </style>

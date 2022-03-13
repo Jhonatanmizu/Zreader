@@ -67,7 +67,7 @@ export default {
   border-radius: 0.32rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .main {
     display: flex;
     align-items: center;
