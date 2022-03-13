@@ -55,5 +55,7 @@ export default {
   background-color: #f2f2f2;
   padding: 1rem;
   border-radius: 0.5rem;
+  -webkit-box-shadow: 5px 5px 30px 5px rgba(0, 0, 0, 0.49);
+  box-shadow: 5px 5px 30px 5px rgba(0, 0, 0, 0.49);
 }
 </style>
