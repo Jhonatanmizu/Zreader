@@ -1,18 +1,15 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import Home from "../views/Home.vue";
-import Login from "../views/Login.vue";
+
 const routes = [
   {
     path: "/",
+    redirect: "/home",
+  },
+  {
+    path: "/home",
     name: "Home",
     component: Home,
-    children: {
-      path: "login",
-      name: "login",
-
-      // component: () => import("../views/Login.vue"),
-      component: Login,
-    },
   },
   {
     path: "/about",
@@ -42,11 +39,18 @@ const routes = [
     path: "/:catchAll(.*)",
     redirect: "/404",
   },
+  {
+    path: "/login",
+    name: "login",
+
+    component: () => import("../views/Login.vue"),
+  },
 ];
 
 const router = createRouter({
   history: createWebHashHistory(),
   routes,
+  linkActiveClass: "active",
 });
 
 export default router;

@@ -29,12 +29,14 @@ export default {
   color: crimson;
 }
 .error .back-to-home {
-  /* color: #e72b45; */
   padding: 0.5rem;
   color: #fff;
   border-radius: 0.5rem;
-  border: 5px solid crimson;
+  transition: all 0.3s ease-in-out;
   background-color: #e72b45;
   text-decoration: dashed;
+}
+.error .back-to-home:hover {
+  background-color: #e72b44d3;
 }
 </style>

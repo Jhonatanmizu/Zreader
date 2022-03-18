@@ -15,8 +15,7 @@
         o objeto de estudo como um meio para alcançar a aprendizagem. O
         construcionismo direciona essa interação para a criação de artefatos,
         que no caso do zReader são as animações.
-      </p>
-      <p class="theory-text">
+        <br />
         No zReader, essas interações ocorrem durante a leitura e durante a
         criação da animação final, no zStudio. Durante a leitura dos zBooks, as
         interações ocorrem pela leitura das páginas e pela a escolha de
@@ -52,10 +51,7 @@ export default {
 .theory-content .theory-text {
   text-align: justify;
   line-height: 1.875rem;
-  background-color: #f2f2f2;
   padding: 1rem;
   border-radius: 0.5rem;
-  -webkit-box-shadow: 5px 5px 30px 5px rgba(0, 0, 0, 0.49);
-  box-shadow: 5px 5px 30px 5px rgba(0, 0, 0, 0.49);
 }
 </style>

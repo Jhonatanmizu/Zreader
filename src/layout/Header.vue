@@ -134,7 +134,6 @@ a {
   .menu a {
     padding: 1rem 0;
     margin: 0 1rem;
-    /* border-bottom: 2px solid rgba(0, 0, 0, 0.5); */
   }
   .menu a::after {
     content: "";
