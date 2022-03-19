@@ -2,11 +2,11 @@
   <section>
     <main class="main container gap">
       <div class="main-content">
-        <h1 class="main-title"><span class="main-title-span">z</span>reader</h1>
+        <div class="top-margin"></div>
         <p class="main-text">
-          O zReader é uma suite composta por diversos jogos, todos com o
-          objetivo de desenvolver a capacidade de leitura das crianças, bem como
-          seu gosto pela atividade de leitura.
+          Somos uma suite composta por diversos jogos, todos com o objetivo de
+          desenvolver a capacidade de leitura das crianças, bem como seu gosto
+          pela atividade de leitura.
         </p>
         <Button text="Baixe o app!" />
       </div>
@@ -66,7 +66,9 @@ export default {
   height: 80%;
   border-radius: 0.32rem;
 }
-
+.top-margin {
+  /* margin-top: 6.25rem; */
+}
 @media (max-width: 800px) {
   .main {
     display: flex;

@@ -32,7 +32,9 @@ export default {
 .footer {
   width: 100%;
   color: var(--secondary-color);
-  background: var(--primary-color);
+  background: linear-gradient(270deg, #c10c25 50%, rgba(231, 43, 69, 0) 81.68%),
+    #f0565c;
+  mix-blend-mode: normal;
   min-height: 12.81rem;
   display: flex;
   padding: 1rem 5.5rem;

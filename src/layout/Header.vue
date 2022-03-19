@@ -1,6 +1,9 @@
 <template>
   <header id="header">
-    <img src="../assets/logo.svg" class="zreader-logo" alt="Zreader logo" />
+    <div class="logo" :class="{ 'ds-none': toggleMenuStatus }">
+      <img src="../assets/logo.svg" class="zreader-logo" alt="Zreader logo" />
+      <p>Sua plataforma de jogos educativos.</p>
+    </div>
     <!-- <a href="#" class="logo">Zreader</a> -->
     <nav :class="[{ active: toggleMenuStatus }, 'nav']">
       <button
@@ -64,7 +67,10 @@ export default {
   width: 100%;
   height: 4.5rem;
   padding: 1rem 5.5rem;
-  background: var(--primary-color);
+
+  background: linear-gradient(270deg, #c10c25 50%, rgba(231, 43, 69, 0) 81.68%),
+    #f0565c;
+  mix-blend-mode: normal;
 }
 
 a {
@@ -72,12 +78,25 @@ a {
   text-decoration: none;
   font-family: sans-serif;
 }
+.logo {
+  min-height: 6.25rem;
+  display: flex;
+
+  position: relative;
+  width: 25rem;
+  transition: all 1s ease-in-out;
+}
 .zreader-logo {
-  height: 3.8rem;
-  width: 3.8rem;
-  box-shadow: 0px 0px 56px -1px rgba(0, 0, 0, 0.55);
-  -webkit-box-shadow: 0px 0px 56px -1px rgba(0, 0, 0, 0.55);
-  -moz-box-shadow: 0px 0px 56px -1px rgba(0, 0, 0, 0.55);
+  position: absolute;
+  top: 1.25rem;
+  height: 6rem;
+  width: 6rem;
+}
+.logo p {
+  position: absolute;
+  top: 5.625rem;
+  font-size: 1rem;
+  left: 7.5rem;
 }
 .menu {
   display: flex;
@@ -88,7 +107,6 @@ a {
   text-transform: uppercase;
   display: block;
   padding: 0.5rem;
-  /* transition: all 0.3s ease-in-out; */
 }
 .menu a::after {
   content: "";
@@ -105,6 +123,9 @@ a {
   width: 50%;
 }
 .btn-mobile {
+  display: none;
+}
+.ds-none {
   display: none;
 }
 @media (max-width: 600px) {

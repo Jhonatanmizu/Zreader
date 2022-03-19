@@ -1,7 +1,8 @@
 <template>
   <section class="theory-section">
+    <Title title="SOBRE O PROJETO" />
     <div class="container gap theory-content">
-      <h2 class="theory-title mb24">Um pouco mais de teoria</h2>
+      <Subtitle subtitle="Um pouco mais de teoria" />
       <p class="theory-text mb24">
         O zReader é resultado de um amplo estudo sobre o uso de tecnologia
         digital para apoiar a alfabetização de crianças. Desenvolvido após a
@@ -30,6 +31,8 @@
 </template>
 
 <script>
+import Title from "../shared/Title.vue";
+import Subtitle from "../shared/Subtitle.vue";
 export default {
   name: "Theory",
   created() {},
@@ -38,6 +41,7 @@ export default {
   },
   props: {},
   methods: {},
+  components: { Title, Subtitle },
 };
 </script>
 
@@ -45,9 +49,7 @@ export default {
 .theory-section {
   margin-bottom: 2.5rem;
 }
-.theory-content .theory-title {
-  text-align: center;
-}
+
 .theory-content .theory-text {
   text-align: justify;
   line-height: 1.875rem;

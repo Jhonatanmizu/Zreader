@@ -11,6 +11,12 @@
   --gap: 1rem;
   --primary-color: #e72b45;
   --secondary-color: #fff;
+  --gradient-color: linear-gradient(
+      270deg,
+      #c10c25 50%,
+      rgba(231, 43, 69, 0) 81.68%
+    ),
+    #f0565c;
 }
 * {
   margin: 0;
@@ -44,6 +50,7 @@ h1 {
 body {
   font-family: "Oswald", sans-serif;
   font-size: 1.25rem;
+  scroll-behavior: smooth;
 }
 .mb24 {
   margin-bottom: 1.5rem;
