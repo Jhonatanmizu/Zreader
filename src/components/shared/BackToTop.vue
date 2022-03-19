@@ -23,7 +23,6 @@ export default {
         document.documentElement.scrollTop > 20
       ) {
         this.$refs["top"].style.display = "flex";
-        console.log(this.$ref);
       } else {
         this.$refs["top"].style.display = "none";
       }
@@ -34,7 +33,6 @@ export default {
       };
     },
     toTop() {
-      console.log(this.$refs["top"]);
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
     },

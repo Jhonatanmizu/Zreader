@@ -43,7 +43,6 @@ export default {
       this.start();
     },
     start() {
-      console.log("Start");
       setInterval(() => {
         this.nextImage();
       }, this.time);
