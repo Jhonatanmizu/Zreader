@@ -82,6 +82,7 @@ export default {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
+
   gap: 0.5rem;
   margin-top: 0.5rem;
 }
@@ -96,9 +97,10 @@ export default {
 }
 @media screen and (max-width: 1000px) {
   .card .card__body {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem;
     align-items: center;
     justify-content: center;
   }
