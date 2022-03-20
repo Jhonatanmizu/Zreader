@@ -107,7 +107,7 @@ export default {
 .accordion::after {
   content: "";
   position: absolute;
-  height: 1rem;
+  height: 0.5rem;
   width: 100%;
   left: 0;
   right: 0;
@@ -137,7 +137,7 @@ export default {
 .accordion-body::after {
   content: "";
   position: absolute;
-  height: 1rem;
+  height: 0.5rem;
   width: 100%;
   left: 0;
   right: 0;

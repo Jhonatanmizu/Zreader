@@ -75,6 +75,17 @@ body {
   height: 19.25rem;
   border-radius: 1.25rem;
 }
+.btn-action {
+  border: none;
+  background: none;
+  height: 1rem;
+  width: 1rem;
+  cursor: pointer;
+}
+.btn-action i {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
 @media screen and (max-width: 1000px) {
   .video {
     width: 20rem;
