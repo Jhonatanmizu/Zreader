@@ -1,10 +1,18 @@
 <template>
-  <section>
-    <div class="container gap publicatons-container">
-      <h3 class="mb24 publications-title">Publicações científicas</h3>
-      <p class="mb24 publications-subtitle">
-        Veja aqui algumas produções científicas publicadas sobre o zReader:
-      </p>
+  <div class="container gap">
+    <div class="accordion mb24">
+      <h3>Publicações Científicas</h3>
+      <button @click="accordionAction" class="btn-action">
+        <i
+          :class="{
+            'fa-solid fa-plus': isCollapsed,
+            'fa-solid fa-minus': !isCollapsed,
+          }"
+        ></i>
+      </button>
+    </div>
+
+    <div class="accordion-body" v-if="!isCollapsed">
       <ul class="list">
         <li class="list-element">
           <a
@@ -58,25 +66,82 @@
         </li>
       </ul>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
 export default {
-  name: "Publications",
+  name: "Accordion",
   created() {},
   data() {
-    return {};
+    return {
+      plus: "fa-solid fa-plus",
+      minus: "fa-solid fa-minus",
+      isCollapsed: true,
+    };
   },
   props: {},
-  methods: {},
+  methods: {
+    accordionAction() {
+      this.isCollapsed = !this.isCollapsed;
+    },
+  },
 };
 </script>
 
 <style scoped>
-.publications-title,
-.publications-subtitle {
-  text-align: center;
+.accordion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 1rem;
+  height: 4.5rem;
+  position: relative;
+  border-radius: 0.625rem;
+  background-color: var(--light-bg);
+  border-bottom: 2rem var(--gradient-color);
+}
+.accordion::after {
+  content: "";
+  position: absolute;
+  height: 1rem;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: -10;
+  bottom: 0;
+  border-radius: 0 0 0.625rem 0.625rem;
+  background: var(--gradient-color);
+}
+.btn-action {
+  border: none;
+  background: none;
+  height: 1rem;
+  width: 1rem;
+  cursor: pointer;
+}
+.btn-action i {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+.accordion-body {
+  background: var(--light-bg);
+  border-radius: 0.625rem;
+  padding: 1rem;
+  position: relative;
+}
+.accordion-body::after {
+  content: "";
+  position: absolute;
+  height: 1rem;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: -10;
+  bottom: 0;
+  border-radius: 0 0 0.625rem 0.625rem;
+  background: var(--gradient-color);
 }
 .list {
   display: flex;
