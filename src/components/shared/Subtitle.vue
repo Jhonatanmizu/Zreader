@@ -36,4 +36,7 @@ export default {
   background: var(--gradient-color);
   mix-blend-mode: normal;
 }
+.subtitle-container .subtitle {
+  font-size: 1.5rem;
+}
 </style>

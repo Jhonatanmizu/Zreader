@@ -35,7 +35,6 @@ export default {
   position: relative;
   text-transform: uppercase;
   margin-bottom: 2rem;
-  border-bottom: 2rem var(--gradient-color);
 }
 .title::after {
   content: "";

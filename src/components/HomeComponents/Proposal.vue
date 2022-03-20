@@ -2,11 +2,9 @@
   <section class="container gap">
     <div class="proposal-content">
       <h2>Tudo em um minuto! Explicação rápida da nossa proposta.</h2>
-      <video class="explanation-video" controls>
-        <source
-          src="../../assets/videos/zReaderEm1Minuto.mp4"
-          type="video/mp4"
-        />
+
+      <video class="video" controls>
+        <source src="../../assets/videos/z1minuto.mp4" type="video/mp4" />
       </video>
     </div>
   </section>
@@ -21,6 +19,7 @@ export default {
   },
   props: {},
   methods: {},
+  components: {},
 };
 </script>
 

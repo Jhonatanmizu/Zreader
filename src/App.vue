@@ -11,6 +11,7 @@
   --gap: 1rem;
   --primary-color: #e72b45;
   --secondary-color: #fff;
+  --light-bg: #f2f2f2;
   --gradient-color: linear-gradient(
       270deg,
       #c10c25 50%,
@@ -64,6 +65,20 @@ body {
 }
 .moveInUp-enter-active {
   animation: fadeIn 1s ease-in;
+}
+.alt-bg {
+  background-color: var(--light-bg);
+}
+.video {
+  width: 35rem;
+  height: 19.25rem;
+  border-radius: 1.25rem;
+}
+@media screen and (max-width: 1000px) {
+  .video {
+    width: 20rem;
+    height: 15rem;
+  }
 }
 @keyframes fadeIn {
   0% {

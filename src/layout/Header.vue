@@ -1,10 +1,9 @@
 <template>
   <header id="header">
-    <div class="logo" :class="{ 'ds-none': toggleMenuStatus }">
+    <div :class="[{ 'ds-none': toggleMenuStatus }, 'logo']">
       <img src="../assets/logo.svg" class="zreader-logo" alt="Zreader logo" />
       <p>Sua plataforma de jogos educativos.</p>
     </div>
-    <!-- <a href="#" class="logo">Zreader</a> -->
     <nav :class="[{ active: toggleMenuStatus }, 'nav']">
       <button
         class="btn-mobile"
@@ -128,7 +127,7 @@ a {
 .ds-none {
   display: none;
 }
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
   #header {
     padding: 1rem;
   }
