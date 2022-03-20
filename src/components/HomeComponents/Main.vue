@@ -67,7 +67,7 @@ export default {
   border-radius: 0.32rem;
 }
 .top-margin {
-  /* margin-top: 6.25rem; */
+  margin-top: 6.25rem;
 }
 @media (max-width: 800px) {
   .main {

@@ -2,6 +2,7 @@
   <Header></Header>
 
   <router-view />
+  <BackToTop />
   <Footer></Footer>
 </template>
 
@@ -106,7 +107,8 @@ body {
 <script>
 import Header from "./layout/Header.vue";
 import Footer from "./layout/Footer.vue";
+import BackToTop from "./components/shared/BackToTop.vue";
 export default {
-  components: { Header, Footer },
+  components: { Header, Footer, BackToTop },
 };
 </script>

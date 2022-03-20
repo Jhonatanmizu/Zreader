@@ -40,7 +40,6 @@ export default {
   content: "";
   position: absolute;
   height: 0.3rem;
-  width: 10rem;
   min-width: 100%;
   left: 0;
   right: 0;
