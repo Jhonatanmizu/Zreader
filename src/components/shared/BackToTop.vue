@@ -51,7 +51,7 @@ export default {
   outline: none;
   cursor: pointer;
 
-  background: var(--gradient-color);
+  background: #798897;
   color: white;
   height: 2rem;
   width: 2rem;
@@ -63,6 +63,6 @@ export default {
   transition: all 0.5s ease-out;
 }
 .btn-to-top:hover {
-  background: crimson;
+  background: #798897cc;
 }
 </style>
