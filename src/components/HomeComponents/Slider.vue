@@ -3,17 +3,16 @@
     <div id="slider">
       <img
         class="selected"
-        src="../../assets/zreader-images/telaInicial2.png"
+        src="../../assets/zreader-slider/zbookHelp.png"
         alt="Tela inicial do Zreader"
       />
-      <img src="../../assets/zreader-images/store.png" alt="Loja  do Zreader" />
       <img
-        src="../../assets/zreader-images/telaDescricaoJogos.png"
-        alt="Descrição de jogos do Zreader"
+        src="../../assets/zreader-slider/zStore.png"
+        alt="Loja  do Zreader"
       />
       <img
-        src="../../assets/zreader-images/estudioGravacao.png"
-        alt="Estúdio de gravação do zreader"
+        src="../../assets/zreader-slider/zbookApp.png"
+        alt="Descrição de jogos do Zreader"
       />
     </div>
   </div>
@@ -67,7 +66,8 @@ export default {
 }
 #slider {
   height: 30rem;
-  width: 58rem;
+  width: 55rem;
+  border-radius: 1rem;
   position: relative;
 }
 #slider img {

@@ -48,6 +48,7 @@ export default {
   mix-blend-mode: normal;
   max-height: 12.81rem;
   display: flex;
+  gap: 1rem;
   padding: 1rem 5.5rem;
   align-items: center;
   justify-content: space-between;
@@ -56,18 +57,15 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 0.5rem;
+  gap: 1rem;
+  padding: 0.5rem;
 }
 .socials img {
   width: 2.81rem;
   height: 2.5rem;
-  transition: all 0.1s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
-.socials img:hover {
-  width: 3rem;
-  height: 2.7rem;
-}
 .support h3 {
   text-align: center;
   margin: 0.2rem;
@@ -76,8 +74,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 0.5rem;
-  /* background-color: #fff; */
+  gap: 1rem;
   padding: 0.5rem;
   border-radius: 0.2rem;
 }
@@ -88,7 +85,7 @@ export default {
   background: #fff;
   padding: 0.2rem;
 }
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .footer {
     flex-direction: column;
     align-items: center;

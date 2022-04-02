@@ -19,7 +19,10 @@
           </p>
         </div>
         <div class="hw-image">
-          <img src="../../assets/leitura.svg" alt="Mulher lendo" />
+          <img
+            src="../../assets/zreader-images/zlibrary.png"
+            alt="Tela do zlibrary"
+          />
         </div>
       </div>
     </div>
@@ -53,15 +56,18 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
   flex-direction: row-reverse;
 }
 .hw-text {
   font-size: 1.5rem;
-  line-height: 36px;
+  line-height: 2.2rem;
 }
+
 .hw-image img {
-  width: 40rem;
+  width: 38rem;
   height: 30rem;
+  border-radius: 1rem;
 }
 .reader {
   height: 3.75rem;
@@ -70,7 +76,7 @@ export default {
 @media screen and (max-width: 810px) {
   .hw-image img {
     width: 20rem;
-    height: 25rem;
+    height: 20rem;
   }
   .hw-text {
     text-align: justify;

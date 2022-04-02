@@ -11,10 +11,7 @@
         <Button text="Baixe o app!" />
       </div>
       <div class="main-image">
-        <img
-          src="../../assets/zreader-images/appGooglePlay.png"
-          alt="App zreader"
-        />
+        <img src="../../assets/zreader-images/mockup.png" alt="App zreader" />
       </div>
     </main>
   </section>
@@ -36,6 +33,7 @@ export default {
   align-items: center;
   justify-content: space-between;
   grid-template-columns: 1fr 1fr;
+  gap: 2rem;
 }
 .mb24 {
   margin-bottom: 1.5rem;
@@ -43,6 +41,7 @@ export default {
 .mb60 {
   margin-bottom: 3.75rem;
 }
+
 .main-title {
   text-transform: uppercase;
   margin-bottom: 1.5rem;
@@ -60,11 +59,11 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1rem;
 }
 .main-image img {
   width: 100%;
   height: 80%;
-  border-radius: 0.32rem;
 }
 .top-margin {
   margin-top: 6.25rem;
