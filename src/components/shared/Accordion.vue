@@ -98,6 +98,7 @@ export default {
   padding: 1rem;
   height: 4.5rem;
   position: relative;
+  width: 100%;
   border-radius: 0.625rem;
   background-color: var(--light-bg);
   border-bottom: 2rem var(--gradient-color);
