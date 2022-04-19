@@ -1,0 +1,30 @@
+{
+  "titles": [
+    {
+      "id": 1,
+      "title": "Infraestrutura"
+    },
+    {
+      "id": 2,
+      "title": "Funcionamento da sessão"
+    }
+  ],
+  "infra": [
+    {
+      "id": 1,
+      "text": " Um dispositivo móvel (tablet ou celular)."
+    },
+    {
+      "id": 2,
+      "text": "Um projetor multimídia ou uma TV para projetar o conteúdo dodispositivo móvel"
+    },
+    {
+      "id": 3,
+      "text": "Uma caixa de som."
+    },
+    {
+      "id": 4,
+      "text": " Um microfone wireless conectado à caixa de som."
+    }
+  ]
+}

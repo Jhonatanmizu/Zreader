@@ -13,41 +13,35 @@
     </div>
     <div class="accordion-body" v-if="!isCollapsed">
       <div class="accordion__body--requirements">
-        <h4 class="mb24">Infraestrutura</h4>
+        <h4 class="mb24">{{ requirementsTitle[0].title }}</h4>
 
         <div class="tips__grid mb24">
-          <div class="tips__grid--element">
-            <span class="element__title">
-              Um dispositivo móvel (tablet ou celular).
-            </span>
-          </div>
-          <div class="tips__grid--element">
-            <span class="element__title">
-              Um projetor multimídia ou uma TV para projetar o conteúdo do
-              dispositivo móvel;
-            </span>
-          </div>
-          <div class="tips__grid--element">
-            <span class="element__title"> Uma caixa de som; </span>
-          </div>
-          <div class="tips__grid--element">
-            <span class="element__title">
-              Um microfone wireless conectado à caixa de som.
-            </span>
-          </div>
+          <TipsElement :requirements="requirements" />
         </div>
       </div>
+      <SessionElement :title="requirementsTitle[1].title" />
+      <SessionElement title="Dicas"/>
     </div>
   </div>
 </template>
 
 <script>
+import TipsElement from "./PlayWithTeamComponents/TipsElement.vue";
+import SessionElement from "./PlayWithTeamComponents/SessionElement.vue";
+const axios = require("axios").default;
 export default {
   name: "PlayWithTeam",
-  created() {},
+  created() {
+  },
+  mounted() {
+    this.getRequirements();
+    
+  },
   data() {
     return {
       isCollapsed: true,
+      requirementsTitle: [],
+      requirements: [],
     };
   },
   props: {},
@@ -55,7 +49,18 @@ export default {
     accordionAction() {
       this.isCollapsed = !this.isCollapsed;
     },
+    getRequirements() {
+      axios
+        .get("http://localhost:3004/infra")
+        .then((resp) => (this.requirements = resp.data))
+        .catch((err) => console.log(err));
+      axios
+        .get("http://localhost:3004/titles")
+        .then((resp) => (this.requirementsTitle = resp.data))
+        .catch((err) => console.log(err));
+    },
   },
+  components: { TipsElement, SessionElement },
 };
 </script>
 
