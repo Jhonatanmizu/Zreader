@@ -1,8 +1,10 @@
 <template>
   <section class="how-it-section">
     <div class="how-it-work container mb60">
-      <h2 class="mb24">Como ele funciona?</h2>
-      <img src="../../assets/reader.svg" class="reader mb24" alt="leitor" />
+      <div class="title-container">
+        <h2 class="mb24">Como ele funciona?</h2>
+        <img src="../../assets/reader.svg" class="reader mb24" alt="leitor" />
+      </div>
       <div class="hw-content">
         <div class="hw-text-content">
           <p class="hw-text gap">
@@ -19,10 +21,7 @@
           </p>
         </div>
         <div class="hw-image">
-          <img
-            src="../../assets/zreader-images/zlibrary.png"
-            alt="Tela do zlibrary"
-          />
+          <img src="../../assets/zreader-images/zlibrary.png" alt="Tela do zlibrary" />
         </div>
       </div>
     </div>
@@ -32,7 +31,7 @@
 <script>
 export default {
   name: "HowItWork",
-  created() {},
+  created() { },
   data() {
     return {};
   },
@@ -44,14 +43,28 @@ export default {
 <style scoped>
 .how-it-section {
   background-color: #f2f2f2;
+  padding: .2rem;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 .how-it-work {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
 }
+
+
+
+.title-container {
+  gap: .5rem;
+  margin-top: 3rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .hw-content {
   display: flex;
   align-items: center;
@@ -59,28 +72,34 @@ export default {
   gap: 1rem;
   flex-direction: row-reverse;
 }
+
 .hw-text {
   font-size: 1.5rem;
   line-height: 2.2rem;
 }
 
 .hw-image img {
-  width: 38rem;
-  height: 30rem;
+  max-width: 38rem;
+  max-height: 30rem;
+  object-fit: cover;
   border-radius: 1rem;
 }
+
 .reader {
   height: 3.75rem;
   width: 3.75rem;
 }
+
 @media screen and (max-width: 810px) {
   .hw-image img {
     width: 20rem;
     height: 20rem;
   }
+
   .hw-text {
     text-align: justify;
   }
+
   .hw-content {
     flex-direction: column;
   }

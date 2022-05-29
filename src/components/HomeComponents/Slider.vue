@@ -1,19 +1,9 @@
 <template>
   <div class="container gap slider-container">
     <div id="slider">
-      <img
-        class="selected"
-        src="../../assets/zreader-slider/zbookHelp.png"
-        alt="Tela inicial do Zreader"
-      />
-      <img
-        src="../../assets/zreader-slider/zStore.png"
-        alt="Loja  do Zreader"
-      />
-      <img
-        src="../../assets/zreader-slider/zbookApp.png"
-        alt="Descrição de jogos do Zreader"
-      />
+      <img class="selected" src="../../assets/zreader-slider/zbookHelp.png" alt="Tela inicial do Zreader" />
+      <img src="../../assets/zreader-slider/zStore.png" alt="Loja  do Zreader" />
+      <img src="../../assets/zreader-slider/zbookApp.png" alt="Descrição de jogos do Zreader" />
     </div>
   </div>
 </template>
@@ -21,14 +11,14 @@
 <script>
 export default {
   name: "Slider",
-  beforeMount() {},
+  beforeMount() { },
   mounted() {
     this.getImagesLength();
   },
 
   data() {
     return {
-      time: 2000,
+      time: 5000,
       currentImageIndex: 0,
       images: null,
       max: 0,
@@ -64,34 +54,39 @@ export default {
   align-items: center;
   flex-direction: column;
 }
+
 #slider {
   height: 30rem;
   width: 55rem;
   border-radius: 1rem;
   position: relative;
 }
+
 #slider img {
   border-radius: 0.3rem;
   position: absolute;
   display: flex;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: all 1s;
   height: 100%;
   opacity: 0;
 }
+
 #slider img.selected {
   opacity: 1;
 }
+
 @media (max-width: 810px) {
   #slider {
-    height: 16rem;
+    height: 20rem;
     width: 25rem;
   }
 }
+
 @media (max-width: 480px) {
   #slider {
-    height: 11rem;
+    height: 14rem;
     width: 19rem;
   }
 }

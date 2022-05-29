@@ -51,7 +51,7 @@ export default {
   outline: none;
   cursor: pointer;
 
-  background: #798897;
+  background: #e72b45;
   color: white;
   height: 2rem;
   width: 2rem;
@@ -62,7 +62,8 @@ export default {
   padding: 0.5rem;
   transition: all 0.5s ease-out;
 }
+
 .btn-to-top:hover {
-  background: #798897cc;
+  background: #e72b45cc;
 }
 </style>

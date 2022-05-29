@@ -1,7 +1,6 @@
 <template>
   <a :href="link" target="_blank">
-    <button class="btn mb24">{{ text }}</button></a
-  >
+    <button class="btn mb24">{{ text }}</button></a>
 </template>
 
 <script>
@@ -31,11 +30,14 @@ export default {
   transition: 0.5s;
   display: flex;
   align-items: center;
+  font-family: 'Oswald', sans-serif;
   justify-content: center;
 }
+
 .btn:hover {
   background: #e72b45cc;
 }
+
 .btn:active {
   background: #ac2234;
 }
