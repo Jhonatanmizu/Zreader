@@ -46,7 +46,7 @@ export default {
   mix-blend-mode: normal;
   min-height: 12.81rem;
   display: flex;
-  gap: 1rem;
+  gap: .5rem;
   padding: 1rem 5.5rem;
   align-items: center;
   justify-content: space-between;
@@ -112,7 +112,7 @@ export default {
   }
 
   50% {
-    transform: translateY(-3rem);
+    transform: translateY(-1.2rem);
   }
 
   100% {
@@ -124,7 +124,7 @@ export default {
   .footer {
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: .5rem;
     padding: var(--gap);
   }
 
