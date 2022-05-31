@@ -51,7 +51,7 @@ export default {
   outline: none;
   cursor: pointer;
 
-  background: #e72b45;
+  background: #e72b45cc;
   color: white;
   height: 2rem;
   width: 2rem;
@@ -64,6 +64,6 @@ export default {
 }
 
 .btn-to-top:hover {
-  background: #e72b45cc;
+  background: #c5182f;
 }
 </style>

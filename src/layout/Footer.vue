@@ -19,7 +19,8 @@
       </div>
     </div>
     <div class="developed">
-      <span>Desenvolvido com <i class="fab fas fa-heart"></i> pela <a href="https://tecnosystemej.com.br">Tecno
+      <span>Desenvolvido com <i class="fab fas fa-heart"></i> pela <a href="https://tecnosystemej.com.br"
+          target="_blank">Tecno
           System</a> </span>
     </div>
   </footer>
@@ -103,6 +104,12 @@ export default {
   cursor: pointer;
   color: var(--secondary-color);
   font-style: italic;
+  transition: all .3s ease;
+
+}
+
+.developed a:hover {
+  color: #fffc;
 
 }
 
